@@ -1,28 +1,28 @@
 import re
 
 #will compare only at the beginning
-x = 'look book pook mook sook'
+x = 'look book pook mook took'
 re.match('[a-d]ook',x)
 
 #will compare only at the beginning
-x = 'book look pook mook sook'
+x = 'book look pook mook took'
 result = re.match('[a-d]ook',x)
 print(result.group(0))
 
 #first occurance from start
-x = 'look pook book mook sook'
+x = 'look pook book mook took'
 result = re.search('[a-d]ook',x)
 print(result.group(0))
 
 
 #first occurance from start (flag = re.I) which is for case insensitive
-x = 'look pook Book  mook sook'
+x = 'look pook Book  mook took'
 result = re.search('[a-d]ook',x,re.I)
 print(result.group(0))
 
 
 #finds all occurances in the string
-x = 'look pook book mook sook'
+x = 'look pook book mook took'
 result = re.findall('[a-r]ook',x)
 print(result)
 
